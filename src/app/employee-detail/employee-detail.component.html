@@ -1,0 +1,5 @@
+<h1>Employee Details</h1>
+<h3>Total Employee Count is {{count}}</h3>
+<div class="section" *ngFor="let employee of employeeList">
+<app-single-employeedetail [item]="employee"> </app-single-employeedetail>
+</div>

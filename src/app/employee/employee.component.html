@@ -1,0 +1,23 @@
+<h2>Employee List</h2>
+<!-- <h3>Total Employee Count is {{count}}</h3> -->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone No.</th>
+        <th scope="col">Action</th>  
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employeeList;let i=index">
+        <th scope="row">{{i}}</th>
+        <td>{{emp.name}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.Phone_number}}</td>
+        <td><a [routerLink]="['/employee-edit',emp.id]">Edit</a><a (click)="deleteEmployee(emp.id)">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <h2 #head>this is a text</h2> -->
