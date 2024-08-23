@@ -1,15 +1,15 @@
 <h2>Employee Login</h2>
 <form  [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
     <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" formControlName="email">
-      <div *ngIf="loginForm.get('email')?.touched&&loginForm.get('email')?.invalid">
-        <small style="color:red" *ngIf="loginForm.get('email')?.errors?.['required']">
-            Email address is required.
+        <label for="username">username address</label>
+        <input type="username" class="form-control" id="username" placeholder="Enter username" formControlName="username">
+      <div *ngIf="loginForm.get('username')?.touched&&loginForm.get('username')?.invalid">
+        <small style="color:red" *ngIf="loginForm.get('username')?.errors?.['required']">
+            Username address is required.
 
         </small>
-        <small style="color:red" *ngIf="loginForm.get('email')?.errors?.['pattern']">
-            Email address is incorrect.
+        <small style="color:red" *ngIf="loginForm.get('username')?.errors?.['pattern']">
+            Username address is incorrect.
         </small>
     </div>
     </div>
