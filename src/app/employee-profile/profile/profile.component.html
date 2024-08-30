@@ -1,0 +1,20 @@
+<div class="profile-container">
+    <div class="profile-header">
+      <h2>Employee Profile</h2>
+    </div>
+    <div *ngIf="profile; else loading">
+      <div class="profile-details">
+        <p><strong>Name:</strong> {{ profile.name }}</p>
+        <p><strong>Email:</strong> {{ profile.email }}</p>
+        <p><strong>Phone Number:</strong> {{ profile.Phone_number }}</p>
+        <p><strong>Designation:</strong> {{ profile.designation }}</p>
+        <p><strong>Date of Birth:</strong> {{ profile.dob | date }}</p>
+        <p><strong>Gender:</strong> {{ profile.gender }}</p>
+      </div>
+    </div>
+    <ng-template #loading>
+      <div class="loading-state">
+        <p>Loading profile...</p>
+      </div>
+    </ng-template>
+  </div>

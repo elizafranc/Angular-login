@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http'
 export class EmployeeService {
   mainurl='https://deserted-sedate-drop.glitch.me/';
   loginurl='https://deserted-sedate-drop.glitch.me/login';
+  profileurl='https://deserted-sedate-drop.glitch.me/protected';
 
   constructor(private http:HttpClient) {
 
@@ -42,4 +43,13 @@ export class EmployeeService {
     return this.http.post<any>(this.loginurl,employee);
   }
 
-}
+  getProfile()
+  {
+    let token=localStorage.getItem('token');
+    const headers=new HttpHeaders().set('x-access-token',token||'');
+    return this.http.get<any>(this.profileurl,{headers});
+  }
+
+  }
+
+

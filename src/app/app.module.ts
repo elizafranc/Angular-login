@@ -12,6 +12,10 @@ import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { SingleEmployeedetailComponent } from './single-employeedetail/single-employeedetail.component';
 import { EmployeeLoginComponent } from './employee-login/employee-login.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
+import { LeaveComponent } from './employee-profile/leave/leave.component';
+import { PayrollComponent } from './employee-profile/payroll/payroll.component';
+import { ProfileComponent } from './employee-profile/profile/profile.component';
 
 
 
@@ -24,7 +28,11 @@ import { EmployeeLoginComponent } from './employee-login/employee-login.componen
     EmployeeEditComponent,
     EmployeeDetailComponent,
     SingleEmployeedetailComponent,
-    EmployeeLoginComponent
+    EmployeeLoginComponent,
+    EmployeeProfileComponent,
+    LeaveComponent,
+    PayrollComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
